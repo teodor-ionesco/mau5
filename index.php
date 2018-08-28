@@ -70,6 +70,8 @@
 		<footer>
 		</footer>
 		<!--script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-rc.2/js/materialize.min.js"></script>-->
-		<script src="static/js/jquery.min.js"></script>
+		<script src="static/js/jquery.min.js">
+			
+		</script>
 	</body>
 </html>

@@ -3,6 +3,7 @@
 	<head>
 		<title>Welcome! || mau5</title>
 		<!--link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-rc.2/css/materialize.min.css">	-->
+		<meta name="viewport" content="user-scalable=no, width=device-width">
 		<style>
 			body 
 			{
@@ -54,6 +55,8 @@
 	
 	
 	<body title="The gateway to a deadmau5 fan.">
+		<div id="cover" style="background-color: #232323; position: absolute; width: 100%; height: 100%; left: -5px;"></div>
+		
 		<header>
 			<div>mau5portal</div>
 		</header>
@@ -70,8 +73,12 @@
 		<footer>
 		</footer>
 		<!--script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-rc.2/js/materialize.min.js"></script>-->
-		<script src="static/js/jquery.min.js">
-			
+		<script src="static/js/jquery.min.js"></script>
+		<script>
+			$(document).ready(function()
+			{
+				$('#cover').attr('hidden', '');
+			});
 		</script>
 	</body>
 </html>

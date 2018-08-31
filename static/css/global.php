@@ -5,6 +5,12 @@ require_once('../../m5_bind.php');
 header('Content-Type: text/css', true);
 
 print('
+	@font-face 
+	{
+		font-family: "Chiller";
+		src: url(//'.SITE_PORTAL_URL.'/static/fonts/CHILLER.TTF) format("truetype");
+	}
+
 	body 
 	{
 		background-image: url(//'. SITE_PORTAL_URL .'/static/img/imagedoc-darknoise.png);

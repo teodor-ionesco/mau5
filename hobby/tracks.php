@@ -14,6 +14,30 @@ require_once('m5_bind.php');
 			{
 				width: 100%;
 			}
+			
+			table
+			{
+				border-collapse: collapse;
+			}
+			
+			table, th, td
+			{
+				border: 1px solid white;
+			}
+			
+			.table_tracks thead tr td
+			{
+				color: yellow;
+				font-size: 17px;
+				text-align: center;
+			}
+			
+			.table_tracks tbody td
+			{
+				color: pink;
+				font-size: 17px;
+				text-align: center;
+			}
 		</style>
 	</head>
 	
@@ -57,9 +81,32 @@ require_once('m5_bind.php');
 				</div>
 				<br>
 				<br> 
-				<audio controls title="Slicer">
-					<source src="//<?= SITE_PORTAL_URL ?>/static/mpeg/slicer.mp3" type="audio/mpeg">
-				</audio>
+				<table class="table_tracks">
+					<thead>
+						<tr>
+							<td>No.</td>
+							<td>Name</td>
+							<td>Uploaded</td>
+							<td>Mastered</td>
+							<td>Released</td>
+							<td style="width:50%;">MP3</td>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td><code>1</code></td>
+							<td><code>Slicer</code></td>
+							<td><code>31/09/2018</code></td>
+							<td><code>Yes</code></td>
+							<td><code>No</code></td>
+							<td>
+								<audio controls title="Slicer">
+									<source src="//<?= SITE_PORTAL_URL ?>/static/mpeg/slicer.mp3" type="audio/mpeg">
+								</audio>
+							</td>
+						</tr>
+					</tbody>
+				</table>
 			</div>
 		</main>
 		

@@ -13,7 +13,7 @@ require_once('m5_bind.php');
 		<style>
 			body 
 			{
-				background-image: url(//<?= SITE_PORTAL_URL ?>static/img/imagedoc-darknoise.png);
+				background-image: url(//<?= SITE_PORTAL_URL ?>/static/img/imagedoc-darknoise.png);
 			}
 			
 			header
@@ -75,13 +75,13 @@ require_once('m5_bind.php');
 			<a href="#" title="My website built for employment and official stuff" style="">My official website</a>
 			<br>
 			<br>
-			<img src="static/img/b04.gif" width="200" title="nyan salutes you! :^)">
+			<img src="//<?= SITE_PORTAL_URL ?>/static/img/b04.gif" width="200" title="nyan salutes you! :^)">
 		</main>
 		
 		<footer>
 		</footer>
 		<!--script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-rc.2/js/materialize.min.js"></script>-->
-		<script src="static/js/jquery.min.js"></script>
+		<script src="//<?= SITE_PORTAL_URL ?>/static/js/jquery.min.js"></script>
 		<script>
 			$(document).ready(function()
 			{

@@ -8,12 +8,12 @@ require_once('m5_bind.php');
 <html lang="EN-US">
 	<head>
 		<title>mau5 || Welcome!</title>
-		<link rel="stylesheet" href="//<?= SITE_PORTAL_URL ?>static/css/materialize.min.css">
+		<link rel="stylesheet" href="//<?= SITE_PORTAL_URL ?>/static/css/materialize.min.css">
 		<meta charset="UTF-8">
 		<style>
 			body 
 			{
-				background-image: url(//<?= SITE_PORTAL_URL ?>static/img/imagedoc-darknoise.png);
+				background-image: url(//<?= SITE_PORTAL_URL ?>/static/img/imagedoc-darknoise.png);
 			}
 			
 			header
@@ -113,7 +113,7 @@ require_once('m5_bind.php');
 				</div>
 				<br>
 				<center>
-					<img class="img_joel" src="//<?= SITE_PORTAL_URL ?>static/img/joel.png" width="75%">
+					<img class="img_joel" src="//<?= SITE_PORTAL_URL ?>/static/img/joel.png" width="75%">
 				</center>
 				
 				<br> 
@@ -123,7 +123,7 @@ require_once('m5_bind.php');
 		<footer>
 		</footer>
 		
-		<script src="//<?= SITE_PORTAL_URL ?>static/js/jquery.min.js"></script>
+		<script src="//<?= SITE_PORTAL_URL ?>/static/js/jquery.min.js"></script>
 		<script>
 			$(document).ready(function(){
 				$('#cover').attr('hidden', '');
@@ -152,6 +152,6 @@ require_once('m5_bind.php');
 				}
 			});
 		</script>
-		<script src="//<?= SITE_PORTAL_URL ?>static/js/materialize.min.js"></script>
+		<script src="//<?= SITE_PORTAL_URL ?>/static/js/materialize.min.js"></script>
 	</body>
 </html>

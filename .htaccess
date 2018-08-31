@@ -3,4 +3,4 @@ RewriteCond %{REQUEST_FILENAME} !-d
 RewriteCond %{REQUEST_FILENAME}\.php -f 
 RewriteRule ^(.*)$ $1.php
 
-Header Set Access-Control-Allow-Origin "http://*.mau5.ml"
+Header Set Access-Control-Allow-Origin "//*.mau5.ml"

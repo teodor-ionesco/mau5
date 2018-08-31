@@ -63,7 +63,9 @@ require_once('m5_bind.php');
 	
 	
 	<body title="The gateway to a deadmau5 fan">
-		<div id="cover" style="background-color: #232323; position: absolute; width: 100%; height: 100%; left: -5px;"></div>
+		<div id="cover" style="background-color: #232323; position: absolute; width: 100%; height: 100%; left: -5px; top: -5px;">
+			<img id="cover_img" style="position: absolute;" src="//<?= SITE_PORTAL_URL ?>/static/img/spinner.gif" width="10%">
+		</div>
 		
 		<header>
 			<div>mau5portal</div>
@@ -83,7 +85,12 @@ require_once('m5_bind.php');
 		<!--script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-rc.2/js/materialize.min.js"></script>-->
 		<script src="//<?= SITE_PORTAL_URL ?>/static/js/jquery.min.js"></script>
 		<script>
-			$(document).ready(function()
+			$(document).ready(function(){
+				$('#cover_img').css('left', ($(window).width()/2 - $('#cover_img').width()/2)+ 'px');
+				$('#cover_img').css('top', ($(window).height()/2 - $('#cover_img').height()/2)+ 'px');
+			});
+
+			$(window).on('load', function()
 			{
 				$('#cover').attr('hidden', '');
 			});

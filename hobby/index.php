@@ -79,7 +79,9 @@ require_once('m5_bind.php');
 	</head>
 	
 	<body>
-		<div id="cover" style="background-color: #232323; position: absolute; width: 100%; height: 100%;"></div>
+		<div id="cover" style="background-color: #232323; position: absolute; width: 100%; height: 100%;">
+			<img id="cover_img" style="position: absolute;" src="//<?= SITE_PORTAL_URL ?>/static/img/spinner.gif" width="10%">
+		</div>
 		<header>
 			<div class="container" style="text-align: right;">
 				<a id="a_menu_li" href="#" >Ménu</a>
@@ -126,6 +128,12 @@ require_once('m5_bind.php');
 		<script src="//<?= SITE_PORTAL_URL ?>/static/js/jquery.min.js"></script>
 		<script>
 			$(document).ready(function(){
+				$('#cover_img').css('left', ($(window).width()/2 - $('#cover_img').width()/2)+ 'px');
+				$('#cover_img').css('top', ($(window).height()/2 - $('#cover_img').height()/2)+ 'px');
+			});
+
+			$(window).on('load', function()
+			{
 				$('#cover').attr('hidden', '');
 			});
 			

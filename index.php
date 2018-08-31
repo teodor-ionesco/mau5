@@ -1,5 +1,11 @@
+<?php
+
+require_once('m5_bind.php');
+
+?>
+
 <!DOCTYPE HTML>
-<html>
+<html lang="EN-US">
 	<head>
 		<title>Welcome! || mau5</title>
 		<!--link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-rc.2/css/materialize.min.css">	-->
@@ -7,7 +13,7 @@
 		<style>
 			body 
 			{
-				background-image: url(static/img/imagedoc-darknoise.png);
+				background-image: url(//<?= SITE_PORTAL_URL ?>static/img/imagedoc-darknoise.png);
 			}
 			
 			header
@@ -21,7 +27,7 @@
 			{
 				color: yellow;
 				font-family: "Chiller", "Sans-Serif";
-				font-size: 88px;
+				font-size: 70px;
 				color: #ffff00;
 			}
 			
@@ -33,16 +39,18 @@
 			
 			a 
 			{
+				background-color: #1f1f1f;
 				color: forestgreen;
-				line-height: 2;
-				font-size: 30px;
+				line-height: 1.5;
+				font-size: 25px;
 				font-family: "Comic Sans MS", cursive, sans-serif;
 				text-decoration: none;
 			}
 			
 			a:hover
 			{
-				text-decoration: underline;
+				background-color: black;
+				/*text-decoration: underline;*/
 				color: red;
 			}
 			
@@ -54,7 +62,7 @@
 	</head>
 	
 	
-	<body title="The gateway to a deadmau5 fan.">
+	<body title="The gateway to a deadmau5 fan">
 		<div id="cover" style="background-color: #232323; position: absolute; width: 100%; height: 100%; left: -5px;"></div>
 		
 		<header>
@@ -62,12 +70,12 @@
 		</header>
 		
 		<main>
-			<a href="#" title="The one I like">My personalized website</a>
+			<a href="//<?= SITE_HOBBY_URL ?>" title="The one I like" style="">My personal site</a>
 			<br>
-			<a href="#" title="My website built for employment and official stuff">My official website</a>
+			<a href="#" title="My website built for employment and official stuff" style="">My official website</a>
 			<br>
 			<br>
-			<img src="static/img/b04.gif" width="200">
+			<img src="static/img/b04.gif" width="200" title="nyan salutes you! :^)">
 		</main>
 		
 		<footer>

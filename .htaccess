@@ -1,6 +1,12 @@
-RewriteEngine On
-RewriteCond %{REQUEST_FILENAME} !-d 
-RewriteCond %{REQUEST_FILENAME}\.php -f 
-RewriteRule ^(.*)$ $1.php
+<IfModule mod_rewrite.c>
+	RewriteEngine On
+	RewriteCond %{REQUEST_FILENAME} !-d 
+	RewriteCond %{REQUEST_FILENAME}\.php -f 
+	RewriteRule ^(.*)$ $1.php
+</IfModule>
 
-Header Set Access-Control-Allow-Origin "//*.mau5.ml"
+<IfModule mod_headers.c>
+    SetEnvIf Origin "http(s)?://(www\.)?(google.com|staging.google.com|development.google.com|personal.mau5.ml|official.mau5.ml)$" AccessControlAllowOrigin=$0
+    Header add Access-Control-Allow-Origin %{AccessControlAllowOrigin}e env=AccessControlAllowOrigin
+    Header merge Vary Origin
+</IfModule>

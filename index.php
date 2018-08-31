@@ -59,13 +59,12 @@ require_once('m5_bind.php');
 				color: brown;
 			}
 		</style>
-		<script src="//<?= SITE_PORTAL_URL ?>/static/js/jquery.min.js"></script>
 	</head>
 	
 	
 	<body title="The gateway to a deadmau5 fan">
 		<div id="cover" style="background-color: #232323; position: absolute; width: 100%; height: 100%; left: -5px; top: -5px;">
-			<img id="cover_img" style="position: absolute;" src="//<?= SITE_PORTAL_URL ?>/static/img/spinner.gif" width="10%">
+			<img id="cover_img" hidden="" style="position: absolute;" src="//<?= SITE_PORTAL_URL ?>/static/img/spinner.gif" width="10%">
 		</div>
 		
 		<header>
@@ -84,8 +83,10 @@ require_once('m5_bind.php');
 		<footer>
 		</footer>
 		<!--script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-rc.2/js/materialize.min.js"></script>-->
+		<script src="//<?= SITE_PORTAL_URL ?>/static/js/jquery.min.js"></script>
 		<script>
 			$(document).ready(function(){
+				$('#cover_img').removeAttr('hidden');
 				$('#cover_img').css('left', ($(window).width()/2 - $('#cover_img').width()/2)+ 'px');
 				$('#cover_img').css('top', ($(window).height()/2 - $('#cover_img').height()/2)+ 'px');
 			});

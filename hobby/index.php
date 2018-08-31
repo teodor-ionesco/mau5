@@ -76,7 +76,6 @@ require_once('m5_bind.php');
 				box-shadow: 0px 0px 75px red;
 			}
 		</style>
-		<script src="//<?= SITE_PORTAL_URL ?>/static/js/jquery.min.js"></script>
 	</head>
 	
 	<body>
@@ -126,9 +125,10 @@ require_once('m5_bind.php');
 		<footer>
 		</footer>
 		
-		
+		<script src="//<?= SITE_PORTAL_URL ?>/static/js/jquery.min.js"></script>
 		<script>
 			$(document).ready(function(){
+				$('#cover_img').removeAttr('hidden');
 				$('#cover_img').css('left', ($(window).width()/2 - $('#cover_img').width()/2)+ 'px');
 				$('#cover_img').css('top', ($(window).height()/2 - $('#cover_img').height()/2)+ 'px');
 			});

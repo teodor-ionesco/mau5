@@ -9,6 +9,7 @@ require_once('m5_bind.php');
 	<head>
 		<title>Welcome! || mau5</title>
 		<!--link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-rc.2/css/materialize.min.css">	-->
+		<meta charset="UTF-8">
 		<meta name="viewport" content="user-scalable=no, width=device-width">
 		<style>
 			body 

@@ -8,93 +8,19 @@ require_once('m5_bind.php');
 <html lang="EN-US">
 	<head>
 		<title>mau5 || Welcome!</title>
-		<link rel="stylesheet" href="//<?= SITE_PORTAL_URL ?>/static/css/materialize.min.css">
-		<meta charset="UTF-8">
+		<?= HTML::head() ?>
 		<style>
-			body 
-			{
-				background-image: url(//<?= SITE_PORTAL_URL ?>/static/img/imagedoc-darknoise.png);
-			}
-			
-			header
-			{
-				box-shadow: 0px 8px 8px #8a1f1f;
-				border-radius: 10px;
-				
-			}
-			
-			header h
-			{
-				color: yellow;
-				font-family: "Chiller", "Sans-Serif";
-				font-size: 70px;
-				color: #ffff00;
-				line-height: 0.3;
-			}
-			
-			a
-			{
-				background-color: #1f1f1f;
-				color: forestgreen;
-				line-height: 1.5;
-				font-size: 20px;
-				font-family: "Comic Sans MS", cursive, sans-serif;
-				text-decoration: none;
-			}
-			
-			a:hover
-			{
-				background-color: black;
-				/*text-decoration: underline;*/
-				color: red;
-			}
-
-			a:active
-			{
-				color: brown;
-			}
-			
-			.menu_li
-			{
-				position: absolute;
-			}
-			
-			.menu_li a
-			{
-				font-size: 15px; !important
-			}
-			
-			.why_mau5
-			{
-				color: #ff96a8;
-				font-size: 20px;
-				font-family: "Comic Sans MS", cursive, sans-serif;
-			}
-			
 			.img_joel 
 			{
+				border-radius: 10px;
 				box-shadow: 0px 0px 75px red;
 			}
 		</style>
 	</head>
 	
 	<body>
-		<div id="cover" style="background-color: #232323; position: absolute; width: 100%; height: 100%;">
-			<img id="cover_img" hidden="" style="position: absolute;" src="//<?= SITE_PORTAL_URL ?>/static/img/spinner.gif" width="10%">
-		</div>
-		<header>
-			<div class="container" style="text-align: right;">
-				<a id="a_menu_li" href="#" >Ménu</a>
-				<ul id="menu_li" class="menu_li" hidden="">
-					<li><a href="#">Cartofi</a></li>
-					<li><a href="#">Pepene</a></li>
-				</ul>
-			</div>
-			<center>
-				<h>mau5ite!</h>
-			</center>
-			<br>
-		</header>
+		<?= HTML::cover() ?>
+		<header><?= HTML::header() ?></header>
 		
 		<br>
 		<main>
@@ -115,15 +41,16 @@ require_once('m5_bind.php');
 				</div>
 				<br>
 				<center>
-					<img class="img_joel" src="//<?= SITE_PORTAL_URL ?>/static/img/joel.png" width="75%">
+					<img class="img_joel" src="//<?= SITE_PORTAL_URL ?>/static/img/joel.png" width="75%" title="deadmau5 during his Masterclass">
 				</center>
-				
 				<br> 
+				<div class="why_mau5">
+					In case you wanna explore this 5ite, hit on <a href="#a_menu_li" style="background-color: inherit;">menu</a> pseudo-button from right top corner of the screen.
+				</div>
 			</div>
 		</main>
 		
-		<footer>
-		</footer>
+		<footer><?= HTML::footer() ?></footer>
 		
 		<script src="//<?= SITE_PORTAL_URL ?>/static/js/jquery.min.js"></script>
 		<script>

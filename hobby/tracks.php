@@ -111,7 +111,7 @@ foreach($rows as $key => $array)
 		<td><code>'.$array['released'].'</code></td>
 		<td>
 			<audio controls title="Slicer">
-				<source src="//<?= SITE_PORTAL_URL ?>/static/mpeg/'.$array['filename'].'" type="audio/mpeg">
+				<source src="//'.SITE_PORTAL_URL.'/static/mpeg/'.$array['filename'].'" type="audio/mpeg">
 			</audio>
 		</td>
 	');

@@ -93,18 +93,36 @@ require_once('m5_bind.php');
 						</tr>
 					</thead>
 					<tbody>
-						<tr>
-							<td><code>1</code></td>
-							<td><code>Slicer</code></td>
-							<td><code>31/09/2018</code></td>
-							<td><code>Yes</code></td>
-							<td><code>No</code></td>
-							<td>
-								<audio controls title="Slicer">
-									<source src="//<?= SITE_PORTAL_URL ?>/static/mpeg/slicer.mp3" type="audio/mpeg">
-								</audio>
-							</td>
-						</tr>
+<?php
+
+$db = new PDO('mysql:host='.DB_HST.';dbname='.DB_NAM, DB_USR, DB_PSS);
+
+$rows = ($db -> query('SELECT * FROM tracks;')) -> fetchAll(PDO::FETCH_ASSOC);
+
+foreach($rows as $key => $array)
+{
+	print('<tr>');
+	
+	foreach($array as $k => $v)
+	{
+		print('
+			<td><code>'.$v['nr'].'</code></td>
+			<td><code>'.$v['name'].'</code></td>
+			<td><code>'.date('d/m/Y', $v['uploaded']).'</code></td>
+			<td><code>'.$v['mastered'].'</code></td>
+			<td><code>'.$v['released'].'</code></td>
+			<td>
+				<audio controls title="Slicer">
+					<source src="//<?= SITE_PORTAL_URL ?>/static/mpeg/'.$v['filename'].'" type="audio/mpeg">
+				</audio>
+			</td>
+		');
+	}
+	
+	print('</tr>');
+}
+
+?>
 					</tbody>
 				</table>
 			</div>

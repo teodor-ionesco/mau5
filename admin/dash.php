@@ -72,7 +72,7 @@ if(!empty($_POST['t_number']))
 	</head>
 	
 	<body>
-		<form action="dash" method="POST" enctype="multipart/form-data" style="display: inline-block;">
+		<form action="dash" method="POST" enctype="multipart/form-data" style="display: inline-block; margin-left: 10px;">
 			<h4>Upload track:</h4>
 			<table border="1">
 				<tr>

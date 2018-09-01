@@ -71,7 +71,7 @@ require_once('m5_bind.php');
 	
 	
 	<body title="The gateway to a deadmau5 fan">
-		<div id="cover" style="background-color: #232323; position: absolute; width: 100%; height: 100%; left: -5px; top: -5px;">
+		<div id="cover" style="background-color: #232323; position: absolute; width: 100%; height: 1000%; left: -5px; top: -5px;">
 			<img id="cover_img" hidden="" style="position: absolute;" src="//<?= SITE_PORTAL_URL ?>/static/img/spinner.gif" width="10%">
 		</div>
 		

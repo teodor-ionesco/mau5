@@ -11,7 +11,6 @@ class HTML
 					<center>
 						<li><a href="tracks">Tracks</a></li>
 						<li><a href="memes">Memes</a></li>
-						<li><a href="pics">Pics</a></li>
 						<li><a href="index">About</a></li>
 					</center>
 				</ul>
@@ -26,7 +25,7 @@ class HTML
 	public static function cover()
 	{
 		print('
-			<div id="cover" style="background-color: #232323; position: absolute; width: 100%; height: 100%;">
+			<div id="cover" style="background-color: #232323; position: absolute; width: 100%; height: 1000%;">
 				<img id="cover_img" hidden="" style="position: absolute;" src="//'.SITE_PORTAL_URL.'/static/img/spinner.gif" width="10%">
 			</div>
 		');

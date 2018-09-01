@@ -8,10 +8,17 @@ require_once('m5_bind.php');
 <html lang="EN-US">
 	<head>
 		<title>Welcome! || mau5</title>
-		<!--link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-rc.2/css/materialize.min.css">	-->
+		
 		<meta charset="UTF-8">
 		<meta name="viewport" content="user-scalable=no, width=device-width">
+		
 		<style>
+			@font-face
+			{
+				font-family: 'Chiller';
+				src: url(//<?= SITE_PORTAL_URL ?>/static/fonts/CHILLER.TTF) format('truetype');
+			}
+			
 			body 
 			{
 				background-image: url(//<?= SITE_PORTAL_URL ?>/static/img/imagedoc-darknoise.png);
@@ -83,7 +90,7 @@ require_once('m5_bind.php');
 		
 		<footer>
 		</footer>
-		<!--script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-rc.2/js/materialize.min.js"></script>-->
+
 		<script src="//<?= SITE_PORTAL_URL ?>/static/js/jquery.min.js"></script>
 		<script>
 			$(document).ready(function(){

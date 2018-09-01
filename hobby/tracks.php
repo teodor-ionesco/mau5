@@ -12,7 +12,7 @@ require_once('m5_bind.php');
 		<style>
 			audio
 			{
-				width: 100%;
+				width: 350px;
 			}
 			
 			table
@@ -89,7 +89,7 @@ require_once('m5_bind.php');
 							<td>Uploaded</td>
 							<td>Mastered</td>
 							<td>Released</td>
-							<td style="width:50%;">MP3</td>
+							<td>MP3</td>
 						</tr>
 					</thead>
 					<tbody>
@@ -111,43 +111,6 @@ require_once('m5_bind.php');
 		</main>
 		
 		<footer><?= HTML::footer() ?></footer>
-		
-		<script src="//<?= SITE_PORTAL_URL ?>/static/js/jquery.min.js"></script>
-		<script>
-			$(document).ready(function(){
-				$('#cover_img').removeAttr('hidden');
-				$('#cover_img').css('left', ($(window).width()/2 - $('#cover_img').width()/2)+ 'px');
-				$('#cover_img').css('top', ($(window).height()/2 - $('#cover_img').height()/2)+ 'px');
-			});
-
-			$(window).on('load', function()
-			{
-				$('#cover').attr('hidden', '');
-			});
-			
-			$(window).resize(function(){
-				$('#menu_li').css('left', ($('#a_menu_li').position()).left);
-			});
-			
-			var gMenuLiToggle = 0;
-			
-			$('#a_menu_li').click(function()
-			{
-				if(gMenuLiToggle === 0)
-				{
-					$('#menu_li').css('left', ($('#a_menu_li').position()).left);
-					$('#menu_li').removeAttr('hidden');
-					
-					gMenuLiToggle++;
-				}
-				else
-				{
-					$('#menu_li').attr('hidden', '');
-					
-					gMenuLiToggle--;
-				}
-			});
-		</script>
-		<script src="//<?= SITE_PORTAL_URL ?>/static/js/materialize.min.js"></script>
+		<?= HTML::javascript() ?>		
 	</body>
 </html>

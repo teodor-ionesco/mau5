@@ -103,21 +103,18 @@ foreach($rows as $key => $array)
 {
 	print('<tr>');
 	
-	foreach($array as $k => $v)
-	{
-		print('
-			<td><code>'.$v['nr'].'</code></td>
-			<td><code>'.$v['name'].'</code></td>
-			<td><code>'.date('d/m/Y', $v['uploaded']).'</code></td>
-			<td><code>'.$v['mastered'].'</code></td>
-			<td><code>'.$v['released'].'</code></td>
-			<td>
-				<audio controls title="Slicer">
-					<source src="//<?= SITE_PORTAL_URL ?>/static/mpeg/'.$v['filename'].'" type="audio/mpeg">
-				</audio>
-			</td>
-		');
-	}
+	print('
+		<td><code>'.$array['nr'].'</code></td>
+		<td><code>'.$array['name'].'</code></td>
+		<td><code>'.date('d/m/Y', $array['uploaded']).'</code></td>
+		<td><code>'.$array['mastered'].'</code></td>
+		<td><code>'.$array['released'].'</code></td>
+		<td>
+			<audio controls title="Slicer">
+				<source src="//<?= SITE_PORTAL_URL ?>/static/mpeg/'.$array['filename'].'" type="audio/mpeg">
+			</audio>
+		</td>
+	');
 	
 	print('</tr>');
 }

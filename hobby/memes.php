@@ -31,7 +31,7 @@ require_once('m5_bind.php');
 					<br>
 					<br>
 					Below I am offering you a list with recent memes I have watched and liked at the same time.
-					You're not obeyed to view them, just know that they are posted here as well :)
+					You're not obeyed to view them, just know that they are posted here as well. This IS my playlist :)
 				</div>
 				<br>
 				

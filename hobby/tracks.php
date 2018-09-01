@@ -76,7 +76,7 @@ require_once('m5_bind.php');
 					<br>
 					<br>
 					I have started to develop some skills in it starting with the beginning of august.
-					Below are some tracks of mine. The quality is MP3 CBR at 320kb/s.
+					Below are some tracks of mine. The quality is MP3 CBR @ 320kb/s.
 					Some may be silly, and I remind you: I don't dare you to listen to them. You can leave anytime you wany :)
 				</div>
 				<br>

@@ -9,9 +9,9 @@ class HTML
 				<a id="a_menu_li" name="a_menu_li" href="#" >Ménu</a>
 				<ul id="menu_li" class="menu_li" hidden="">
 					<center>
-						<li><a href="tracks">Tracks</a></li>
-						<li><a href="memes">Memes</a></li>
-						<li><a href="index">About</a></li>
+						<li><a href="//'.SITE_HOBBY_URL.'/tracks">Tracks</a></li>
+						<li><a href="//'.SITE_HOBBY_URL.'/memes">Memes</a></li>
+						<li><a href="//'.SITE_HOBBY_URL.'/index">About</a></li>
 					</center>
 				</ul>
 			</div>

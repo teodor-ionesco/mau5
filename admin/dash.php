@@ -9,6 +9,7 @@ if(empty($_SESSION['l']))
 
 require_once('m5_bind.php');
 
+$db = new PDO('mysql:host='.DB_HST.';dbname='.DB_NAM, DB_USR, DB_PSS);
 
 ////////// Track upload part.
 if(	!empty($_POST['t_name']) 	&&
@@ -16,8 +17,6 @@ if(	!empty($_POST['t_name']) 	&&
 	!empty($_POST['t_released']) &&
 	!empty($_FILES['t_fname']) )
 {
-	$db = new PDO('mysql:host='.DB_HST.';dbname='.DB_NAM, DB_USR, DB_PSS);
-
 	$name = $_POST['t_name'];
 	$mastered = $_POST['t_mastered'];
 	$released = $_POST['t_released'];
@@ -41,8 +40,6 @@ if(	!empty($_POST['t_name']) 	&&
 ////////// Track delete part.
 if(!empty($_POST['t_number']))
 {
-	$db = new PDO('mysql:host='.DB_HST.';dbname='.DB_NAM, DB_USR, DB_PSS);
-	
 	$prepare = $db -> prepare("SELECT filename 
 								FROM tracks
 								WHERE tracks.nr = :nr;");
@@ -61,6 +58,54 @@ if(!empty($_POST['t_number']))
 		':nr' => $_POST['t_number'],
 	]);
 }
+
+////////// Post meme part.
+if(!empty($_POST['m_url']))
+{
+	$url = preg_replace('@https?://.*\.youtube\.com/watch\?v=@', 'https://www.youtube.com/embed/', $_POST['m_url']);
+	$url = preg_replace('@https?://.*\.?youtu.be/@', 'https://www.youtube.com/embed/', $url);	
+
+	if($url !== $_POST['m_url'])
+	{	
+		$url = $url . '?rel=0';
+
+		$ch = curl_init($_POST['m_url']);
+			curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+			curl_setopt($ch, CURLOPT_FOLLOWLOCATION, true);
+			curl_setopt($ch, CURLOPT_HEADER, 1);
+			curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, 0);
+			curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
+			curl_setopt($ch, CURLOPT_SSL_VERIFYHOST, 2);
+			$output = curl_exec($ch);
+		curl_close($ch);
+		
+		preg_match('@<span id="eow-title" class="watch-title" dir="ltr" title="(.*)">@', $output, $m);
+			
+		$description = $m[1];	
+		
+		$prepare = $db -> prepare("INSERT  
+									INTO memes(url, description)
+									VALUES(:url, :description);");
+		$prepare -> execute([
+			':url' => $url,
+			':description' => $description,
+		]);
+	}
+	else
+	{
+		print('<span style="color:red;">Not a youtube URL.</span>');
+	}
+}
+
+if(!empty($_POST['m_nr']))
+{
+	$prepare = $db -> prepare("DELETE
+								FROM memes
+								WHERE memes.nr = :nr;");
+	$prepare -> execute([
+		':nr' => $_POST['m_nr'],
+	]);
+}	
 
 ?>
 
@@ -107,5 +152,59 @@ if(!empty($_POST['t_number']))
 			<br>
 			<input type="submit">
 		</form>
+		
+		<br><br>
+		
+		<form action="dash" method="POST" style="position: relative; display: inline-block; margin-left: 10px;">
+			<h4>Post meme</h4>
+			<table border="1">
+				<tr>
+					<td>YouTube URL:&nbsp;</td>
+					<td><input name="m_url" type="text" required=""></td>
+				</tr>
+			</table>
+			<br>
+			<input type="submit">
+		</form>
+		
+		<form action="dash" method="POST" style="display: inline-block; margin-left: 10px;">
+			<h4>Delete meme</h4>
+			<table border="1">
+				<tr>
+					<td>Nr:&nbsp;</td>
+					<td><input name="m_nr" type="text" required=""></td>
+				</tr>
+			</table>
+			<br>
+			<input type="submit">
+		</form>
+		
+		<div style="margin-left: 10px;">
+			<h4>Posted memes:</h4>
+			<table border="1px">
+				<thead>
+					<tr>
+						<td>Nr.</td>
+						<td>Description</td>
+					</tr>
+				</thead>
+				<tbody>
+<?php
+
+$rows = ($db -> query('SELECT * FROM memes ORDER BY nr DESC;')) -> fetchAll(PDO::FETCH_ASSOC);
+
+foreach($rows as $key => $array)
+{
+	print('
+		<tr>
+			<td>'.$array['nr'].'</td>
+			<td>'.$array['description'].'</td>
+		</tr>
+	');
+}
+?>
+				</tbody>
+			</table>
+		</div>
 	</body>
 </html>

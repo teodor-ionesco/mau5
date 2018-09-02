@@ -82,7 +82,7 @@ require_once('m5_bind.php');
 		<main>
 			<a href="//<?= SITE_HOBBY_URL ?>" title="The one I like" style="">My personal site</a>
 			<br>
-			<a href="#" title="My website built for employment and official stuff" style="">My official website</a>
+			<a href="//<?= SITE_PUBLIC_URL ?>" title="My website built for employment and official stuff" style="">My official website</a>
 			<br>
 			<br>
 			<img src="//<?= SITE_PORTAL_URL ?>/static/img/b04.gif" width="200" title="nyan salutes you! :^)">

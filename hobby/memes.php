@@ -65,7 +65,6 @@ foreach($rows as $key => $array)
 	if($d_row === 2)
 	{
 		print('</div>');
-		$d_row = 0;
 	}
 }
 

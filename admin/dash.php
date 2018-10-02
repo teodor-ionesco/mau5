@@ -37,6 +37,67 @@ if(	!empty($_POST['t_name']) 	&&
 	]);
 }
 
+////////// Track update part.
+if(!empty($_GET['up_t']) && !empty($_POST['up']['t_nr']))
+{
+	if(!empty($_POST['up']['t_name']))
+	{
+		$prepared = $db -> prepare("UPDATE tracks
+									SET name = :name
+									WHERE tracks.nr = :nr;");
+		$prepared -> execute([
+			':name' => $_POST['up']['t_name'],
+			':nr' => $_POST['up']['t_nr'],
+		]);
+	}
+	
+	if(!empty($_POST['up']['t_mastered']))
+	{
+		$prepared = $db -> prepare("UPDATE tracks
+									SET mastered = :mastered
+									WHERE tracks.nr = :nr;");
+		$prepared -> execute([
+			':mastered' => $_POST['up']['t_mastered'],
+			':nr' => $_POST['up']['t_nr'],
+		]);
+	}
+	
+	if(!empty($_POST['up']['t_released']))
+	{
+		$prepared = $db -> prepare("UPDATE tracks
+									SET released = :released
+									WHERE tracks.nr = :nr;");
+		$prepared -> execute([
+			':released' => $_POST['up']['t_released'],
+			':nr' => $_POST['up']['t_nr'],
+		]);
+	}
+
+	if(!empty($_FILES['up']['name']['t_fname']))
+	{
+		$prepared = $db -> prepare("SELECT filename
+									FROM tracks
+									WHERE tracks.nr = :nr;");
+		$prepared -> execute([
+			':nr' => $_POST['up']['t_nr'],
+		]);
+
+		unlink('../static/mpeg/' . $prepared -> fetch(PDO::FETCH_ASSOC)['filename']);
+		
+		$fname = md5($_FILES['up']['name']['t_fname'].time()) . '.' . @end(explode('.', $_FILES['up']['name']['t_fname']));
+		
+		move_uploaded_file($_FILES['up']['tmp_name']['t_fname'], '../static/mpeg/' . $fname); 
+		
+		$prepared = $db -> prepare("UPDATE tracks
+									SET filename = :fname
+									WHERE tracks.nr = :nr;");
+		$prepared -> execute([
+			':fname' => $fname,
+			':nr' => $_POST['up']['t_nr'],
+		]);
+	}
+}
+
 ////////// Track delete part.
 if(!empty($_POST['t_number']))
 {
@@ -117,43 +178,81 @@ if(!empty($_POST['m_nr']))
 	</head>
 	
 	<body>
-		<form action="dash" method="POST" enctype="multipart/form-data" style="display: inline-block; margin-left: 10px;">
-			<h4>Upload track:</h4>
-			<table border="1">
-				<tr>
-					<td>Name:&nbsp;</td>
-					<td><input type="text" name="t_name" required="" autofocus=""></td>
-				</tr>
-				<tr>
-					<td>Mastered:&nbsp;</td>
-					<td><input type="text" name="t_mastered" required=""></td>
-				</tr>
-				<tr>
-					<td>Released:&nbsp;</td>
-					<td><input type="text" name="t_released" required=""></td>
-				</tr>
-				<tr>
-					<td>Filename:&nbsp;</td>
-					<td><input type="file" name="t_fname" required=""></td>
-				</tr>			
-			</table>
-			<br>
-			<input type="submit">
-		</form>
+		<table>
+			<tr>
+				<td style="position: relative; top: -14px;">
+					<form action="dash" method="POST" enctype="multipart/form-data" style="">
+						<h4>Upload track:</h4>
+						<table border="1">
+							<tr>
+								<td>Name:&nbsp;</td>
+								<td><input type="text" name="t_name" required="" autofocus=""></td>
+							</tr>
+							<tr>
+								<td>Mastered:&nbsp;</td>
+								<td><input type="text" name="t_mastered" required=""></td>
+							</tr>
+							<tr>
+								<td>Released:&nbsp;</td>
+								<td><input type="text" name="t_released" required=""></td>
+							</tr>
+							<tr>
+								<td>Filename:&nbsp;</td>
+								<td><input type="file" name="t_fname" required=""></td>
+							</tr>			
+						</table>
+						<br>
+						<input type="submit">
+					</form>
+				</td>
+
+				<td>
+					<form action="dash.php?up_t=1" method="POST" enctype="multipart/form-data" style="">
+						<h4>Update track:</h4>
+						<table border="1">
+							<tr>
+								<td>Track no. &nbsp;</td>
+								<td><input type="text" name="up[t_nr]" required="" autofocus=""></td>
+							</tr>
+							<tr>
+								<td>Name:&nbsp;</td>
+								<td><input type="text" name="up[t_name]"  autofocus=""></td>
+							</tr>
+							<tr>
+								<td>Mastered:&nbsp;</td>
+								<td><input type="text" name="up[t_mastered]" ></td>
+							</tr>
+							<tr>
+								<td>Released:&nbsp;</td>
+								<td><input type="text" name="up[t_released]" ></td>
+							</tr>
+							<tr>
+								<td>Filename:&nbsp;</td>
+								<td><input type="file" name="up[t_fname]" ></td>
+							</tr>			
+						</table>
+						<br>
+						<input type="submit">
+					</form>				
+				</td>
+
+				<td style="position: relative; top: -55px;">
+					<form action="dash" method="POST" style="">
+						<h4>Delete track:</h4>
+						<table border="1">
+							<tr>
+								<td>Track no:</td>
+								<td><input name="t_number" type="text" required=""></td>
+							</tr>
+						</table>
+						<br>
+						<input type="submit">
+					</form>
+				</td>				
+			</tr>
+		</table>
 		
-		<form action="dash" method="POST" style="display: inline-block; position: absolute; margin-left: 10px;">
-			<h4>Delete track:</h4>
-			<table border="1">
-				<tr>
-					<td>Track no:</td>
-					<td><input name="t_number" type="text" required=""></td>
-				</tr>
-			</table>
-			<br>
-			<input type="submit">
-		</form>
-		
-		<br><br>
+		<br>
 		
 		<form action="dash" method="POST" style="position: relative; display: inline-block; margin-left: 10px;">
 			<h4>Post meme</h4>

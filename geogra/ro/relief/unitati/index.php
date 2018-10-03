@@ -13,6 +13,7 @@
 			<ol class="flow-text">
 				<li><a href="dcat/teorie.php">Depresiunea Colinară a Transilvaniei</a></li>
 				<li><a href="podmold/teorie.php">Podișul Moldovei</a></li>
+				<li><a href="poddob/teorie.php">Podișul Dobrogei</a></li>
 			</ol>
 		</div>
 		

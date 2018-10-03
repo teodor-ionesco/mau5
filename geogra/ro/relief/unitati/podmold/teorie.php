@@ -24,23 +24,24 @@
 				Alcătuit din roci sedimentare: <br>
 					&nbsp;&nbsp;&nbsp;• marne<br>
 					&nbsp;&nbsp;&nbsp;• gresii slab consolidate<br>
-					&nbsp;&nbsp;&nbsp;• calcare<br>
+					&nbsp;&nbsp;&nbsp;• calcare
 				<br><br>
 				
 				► <b>Relieful <i>(în genere)</i>: </b> 
 				<br>
 					&nbsp;&nbsp;&nbsp;• Altitudinile scad progresiv de la <span style="background-color:yellow;">400 m</span> <i>(Nord)</i> la <span style="background-color:yellow;">100 m</span> <i>(Sud)</i><br>
-					&nbsp;&nbsp;&nbsp;• Altitudini maxime: <span style="background-color:yellow;">467 m</span> în Vf. Greci din Munţii Măcinului<br>
-					&nbsp;&nbsp;&nbsp;• Fragmentare: <span style="background-color:yellow;">deluroasă</span>
+					&nbsp;&nbsp;&nbsp;• Altitudini maxime: <span style="background-color:yellow;">682 m</span> în Dealul Ciungi<br>
+					&nbsp;&nbsp;&nbsp;• Fragmentare: <span style="background-color:yellow;">deluroasă</span> și <span style="background-color:yellow;">colinară</span>
 				<br><br>
 				
 				► <b>Relieful fluvial: </b> 
-				<span style="background-color:yellow;">văi largi</span> paralele
+				<span style="background-color:yellow;">văi largi</span>, însoțite de <span style="background-color:yellow;">terase</span>
 				<br><br>
 				
 				► <b>Informații adiționale: </b>
 					<br>
-				&nbsp;&nbsp;&nbsp;• Pe stratele de loess <i>(în Sud)</i> se formează mici depresiuni de terase numite <span style="background-color:yellow;">crovuri</span>.<br>
+					&nbsp;&nbsp;&nbsp;• La contactul dintre Câmpia Moldovei şi unităţi mai înalte <i>(ex: Pod. Sucevei)</i> se formează <span style="background-color:yellow;">cueste</span>.<br>
+					&nbsp;&nbsp;&nbsp;• Are o înclinare generală de la N la S.
       </p>
 			<a href="quiz.php" class="btn waves-effect waves-light red">Quiz</a>
 			<br>

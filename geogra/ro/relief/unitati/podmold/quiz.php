@@ -65,7 +65,7 @@
 				4 : {
 					question : 'Ce tip de fragmentare este prezentă în Podișul Moldovei?',
 					answers : {
-						0 : 'Deluroasă și colinară',
+						0 : 'Deluroasă',
 						1 : 'Nu prezintă fragmentare',
 						2 : 'Accentuată',
 						3 : 'Accentuată, cu relief carstic',
@@ -76,29 +76,18 @@
 				5 : {
 					question : 'Unde se formează cuestele?',
 					answers : {
-						0 : 'La contactul dintre Câmpia Moldovei și unități mai înalte, precum Pod. Sucevei',
+						0 : 'La contactul dintre Câmpia Moldovei și unități mai înalte',
 						1 : 'De-a lungul Prutului',
-						2 : 'La contactul dintre Podișul Moldovei și Subcarpații Moldovei.',
+						2 : 'La contactul dintre Podișul Moldovei și Subcarpații Moldovei',
 						3 : 'La contactul dintre Podișul Moldovei și Câmpia Română',
 					},
 					correct : 0,
 				},
 				
-				
-					
-					
-						
-						
-						
-						
-					
-					
-				
-				
 				6 : {
 					question : 'Prin ce se caracterizează relieful fluvial din Podişul Moldovei?',
 					answers : {
-						0 : 'Văi largi cu terase',
+						0 : 'Văi largi, paralele',
 						1 : 'Văi înguste cu versanți abrupți',
 						2 : 'Nu există relief fluvial',
 						3 : 'Văi înguste cu terase',

@@ -79,23 +79,23 @@
 						0 : 'La contactul dintre Câmpia Moldovei și unități mai înalte, precum Pod. Sucevei',
 						1 : 'De-a lungul Prutului',
 						2 : 'La contactul dintre Podișul Moldovei și Subcarpații Moldovei.',
-						3 : 'La înălțimi de peste 600 m',
+						3 : 'La contactul dintre Podișul Moldovei și Câmpia Română',
 					},
 					correct : 0,
 				},
+				
+				
+					
+					
+						
+						
+						
+						
+					
+					
+				
 				
 				6 : {
-					question : 'Ce conțin domurile din Depresiunea Colinară a Transilvaniei?',
-					answers : {
-						0 : 'Gaz metan',
-						1 : 'Argint',
-						2 : 'Bauxită',
-						3 : 'Var stins',
-					},
-					correct : 0,
-				},
-				
-				7 : {
 					question : 'Prin ce se caracterizează relieful fluvial din Podişul Moldovei?',
 					answers : {
 						0 : 'Văi largi cu terase',
@@ -107,7 +107,7 @@
 				},
 			}
 			
-			var qNum = 8;
+			var qNum = 7;
 			var aNum = 4;
 			
 			var qCount = 0;

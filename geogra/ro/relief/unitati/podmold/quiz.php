@@ -105,9 +105,21 @@
 					},
 					correct : 0,
 				},
+				
+				7 : {
+					question : 'Ce înclinare are Podișul Moldovei?',
+					answers : {
+						0 : 'De la Nord la Sud',
+						1 : 'De la Sud la Nord',
+						2: 'De la Nord la Vest',
+						3 : 'De la Vest la Nord-Est',
+					},
+					correct: 0,
+				},
+						
 			}
 			
-			var qNum = 7;
+			var qNum = 8;
 			var aNum = 4;
 			
 			var qCount = 0;

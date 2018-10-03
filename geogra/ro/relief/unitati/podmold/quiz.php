@@ -52,22 +52,22 @@
 				},
 				
 				3 : {
-					question : 'Care este altitudinea maximă din Depresiunea Colinară a Transilvaniei?',
+					question : 'Care este altitudinea maximă din Podişul Moldovei?',
 					answers : {
-						0 : '1080 m în Dealul Becheci',
+						0 : '682 m în Dealul Ciungi',
 						1 : '467 m în Vf. Greci',
-						2 : '1347 m în Vf. Semenic',
+						2 : '1080 m în Dealul Bechci',
 						3 : '1217 m în Dealul Chichioara',
 					},
 					correct : 0,
 				},
 				
 				4 : {
-					question : 'Ce fel de fragmentare prezintă Depresiunea Colinară a Transilvaniei?',
+					question : 'Un?',
 					answers : {
 						0 : 'Deluroasă și colinară',
 						1 : 'Nu prezintă fragmentare',
-						2 : 'Prezentă doar în jurul cutelor diapire',
+						2 : 'Accentuată',
 						3 : 'Accentuată, cu relief carstic',
 					},
 					correct : 0,
@@ -96,7 +96,7 @@
 				},
 				
 				7 : {
-					question : 'Prin ce se caracterizează relieful fluvial din Depresiunea Colinară a Transilvaniei?',
+					question : 'Prin ce se caracterizează relieful fluvial din Podişul Moldovei?',
 					answers : {
 						0 : 'Văi largi cu terase',
 						1 : 'Văi înguste cu versanți abrupți',

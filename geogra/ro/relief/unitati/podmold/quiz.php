@@ -63,7 +63,7 @@
 				},
 				
 				4 : {
-					question : 'Un?',
+					question : 'Ce tip de fragmentare este prezentă în Podișul Moldovei?',
 					answers : {
 						0 : 'Deluroasă și colinară',
 						1 : 'Nu prezintă fragmentare',
@@ -74,12 +74,12 @@
 				},
 				
 				5 : {
-					question : 'Ce conțin cutele diapire din Depresiunea Colinară a Transilvaniei?',
+					question : 'Unde se formează cuestele?',
 					answers : {
-						0 : 'Sare',
-						1 : 'Cărbune',
-						2 : 'Gaz metan',
-						3 : 'Aur',
+						0 : 'La contactul dintre Câmpia Moldovei și unități mai înalte, precum Pod. Sucevei',
+						1 : 'De-a lungul Prutului',
+						2 : 'La contactul dintre Podișul Moldovei și Subcarpații Moldovei.',
+						3 : 'La înălțimi de peste 600 m',
 					},
 					correct : 0,
 				},

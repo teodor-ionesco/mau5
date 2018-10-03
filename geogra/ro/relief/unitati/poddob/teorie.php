@@ -23,9 +23,13 @@
 				<br><br>
 				
 				► <b>Petrografie: </b> 
-          &nbsp;&nbsp;&nbsp;• Masivul Nord-Dobrogean: în timpul orogenezei <span style="background-color:yellow;">hercinice</span> prin <span style="background-color:yellow;">încreţirea</span> scoarţei terestre.<br>
-				  &nbsp;&nbsp;&nbsp;• Podişul Casimcei <i>(Centru)</i>: în timpul orogenezei <span style="background-color:yellow;">caledoniene</span>, prin <span style="background-color:yellow;">încreţirea</span> scoarţei terestre.<br>
-          &nbsp;&nbsp;&nbsp;• Podişul Dobrogei de Sud <i>(Sud)</i>: prin <span style="background-color:yellow;">sedimentare</span>
+          				&nbsp;&nbsp;&nbsp;• Munţii Măcinului <i>(Nord)<i>: <span style="background-color:yellow;">şisturi cristaline</span> şi <span style="background-color:yellow;">granite roşii</span>.<br>
+				  	&nbsp;&nbsp;&nbsp;• Podişul Casimcei <i>(Centru)</i>: <span style="background-color:yellow;">şisturi verzi</span> (cele mai vechi roci din ţară).<br>
+          				&nbsp;&nbsp;&nbsp;• Podişul Dobrogei de Sud <i>(Sud)</i>: roci <span style="background-color:yellow;">sedimentare</span> necutate:<br>
+					&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;• calcare <br>
+					&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;• argile <br>
+					&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;• loess <br>
+					&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;• nisipuri <br>
 				<br><br>
 				
 				► <b>Relieful <i>(în genere)</i>: </b> 

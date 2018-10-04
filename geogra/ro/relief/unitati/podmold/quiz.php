@@ -87,7 +87,7 @@
 				6 : {
 					question : 'Prin ce se caracterizează relieful fluvial din Podişul Moldovei?',
 					answers : {
-						0 : 'Văi largi, paralele',
+						0 : 'Văi largi, însoțite de terase',
 						1 : 'Văi înguste cu versanți abrupți',
 						2 : 'Nu există relief fluvial',
 						3 : 'Văi înguste cu terase',

@@ -12,7 +12,7 @@
 			<p class="flow-text">Bună! Ce doriți să repetați?</p>
 			<ol class="flow-text">
 				<li><a href="relief/unitati/index.php">Unități de relief</a></li>
-				<li><a href="romania.php">Subunități de relief</a></li>
+				<li><a href="relief/subunitati/index.php">Subunități de relief</a></li>
 			</ol>
 		</div>
 		

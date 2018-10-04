@@ -186,7 +186,7 @@
 				15 : {
 					question : 'Prin ce se caracterizează relieful fluvial în Podișul Dobrogei?',
 					answers : {
-						0 : 'Formează văi largi, paralele',
+						0 : 'Formează văi largi, însoțite de terase',
 						1 : 'Formează văi înguste, concentrice',
 						2 : 'Este însoțit de relief glaciar',
 						3 : 'Formează văi înguste cu versanți abrupți',

@@ -10,11 +10,10 @@
 	<body>
 		<div class="container">
 			<p class="flow-text">Bună! Ce doriți să repetați?</p>
-			<ul class="flow-text">
-				<li> <a href="//www.geogra.ro/joc/relief/index.php" target="_BLANK">Subunităţi de relief</a></li>
-			</ul>
 			
 			<ol class="flow-text">
+				<li><a href="//www.geogra.ro/joc/relief/index.php" target="_BLANK">Subunităţi de relief</a></li>
+				<br>
 				<!--<li><a href="dcat/teorie.php">Depresiunea Colinară a Transilvaniei</a></li>-->
 			</ol>
 		</div>

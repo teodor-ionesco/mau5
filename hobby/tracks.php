@@ -72,12 +72,12 @@ require_once('m5_bind.php');
 					<br>
 					I have been working with FL Studio for more than a year however I never wanted to deepen the knowledge in it. 
 					Most (if not all) of my old tracks literally suck. 
-					I'm not even bother uploading them because really, you wouldn't want to hear them.
+					I don't even bother to upload them because really, you wouldn't want to hear them.
 					<br>
 					<br>
-					I have started to develop some skills in it starting with the beginning of august.
+					I have started to develop some skills in it starting with the beginning of august (2018).
 					Below are some tracks of mine. The quality is MP3 CBR @ 320kb/s.
-					Some may be silly, and I remind you: I don't dare you to listen to them. You can leave anytime you wany :)
+					Some may be silly, and I remind you: I don't dare you to listen to them. You can leave anytime you want :)
 				</div>
 				<br>
 				<br> 

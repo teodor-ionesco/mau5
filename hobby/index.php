@@ -32,9 +32,8 @@ require_once('m5_bind.php');
 					<br>
 					<br>
 					<span style="color: red;">mau5</span> comes from "dead<span style="color: red;">mau5</span>' 
-					which is the nick of a well known Canadian music producer named Joel Zimmerman. I can't say why I choose it.
-					I could have chosen smthing like <span style="color: brown;">r@ven</span> or <span style="color: brown;">d0ll</span>.
-					Partly because I like Joel's tracks, partly because I like the way it sounds: mau5 
+					which is the nick of a well known Canadian music producer named Joel Zimmerman. 
+					I choose it partly because I like Joel's tracks, partly because I like the way it sounds: mau5. Or maybe because I lack imagination, who knows :)
 					<a href="#!" style="background-color: inherit;" title="Listen :^)">
 						<img width="20" src="//<?= SITE_PORTAL_URL ?>/static/img/sound.png" id="mau5hear">
 					</a>. 
@@ -49,7 +48,7 @@ require_once('m5_bind.php');
 				</center>
 				<br> 
 				<div class="why_mau5">
-					In case you wanna explore this 5ite, hit on <a href="#a_menu_li" style="background-color: inherit;">menu</a> pseudo-button from right top corner of the screen.
+					If you wanna explore this site deeper, hit on <a href="#a_menu_li" style="background-color: inherit;">menu</a> pseudo-button from right top corner of the screen.
 				</div>
 			</div>
 		</main>

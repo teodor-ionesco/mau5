@@ -41,7 +41,7 @@ require_once('bind.php');
 	<body>
 		<h2>Hello, stranger! Welcome to my site!</h2>
 		<p>
-			My name is Theodor.
+			My name is Teodor.
 			<br> 
 			I am a passionate full-stack web developer with deep knowledge in PHP. 
 			I have recently started developing my skills in C++ as well. 
